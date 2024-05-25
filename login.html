@@ -1,0 +1,62 @@
+<title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body class="bg-black">
+<div class="container bg-body-tertiary rounded border position-absolute top-50 start-50 translate-middle col-xl-5">
+    
+    <form action="" method="post" class="needs-validation" novalidate>
+        <div class="form-label align-items-center mb-3">
+            <div class="col-12">
+                <label for="usuario" class="col-form-label">Usuário</label>
+                <input type="text" id="usuario-login" name="usuario-login" class="form-control" aria-describedby="usuario-login" required>
+                <div class="invalid-feedback">
+                    Informe seu nome de usuário
+                </div>
+            </div>
+        </div>
+
+        <div class="form-label align-items-center">
+            <div class="col-12">
+                <label for="senha" class="col-form-label">Senha</label>
+                <input type="password" id="senha-login" name="senha-login" class="form-control" aria-describedby="senha-login" placeholder="Deve ter de 8 a 20 caracteres." required>
+                <div class="invalid-feedback">
+                    Informe sua senha
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <input type="checkbox" name="lembrar-usuario" id="lembrar-usuario"></input>
+            <label for="lembrar-usuario">Lembrar meu usuário</label>
+        </div>
+
+        <div class="py-3 px-3 row">
+            <button type="submit" name="btnEntrar" class="btn btn-danger btn-block col-xl-4">Entrar</button>
+        </div>
+
+    </form>
+</div>
+
+<div>
+<!-- Inclui o JavaScript do Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous" defer></script>
+<!-- Script para validação do formulário -->
+<script>
+(() => {
+'use strict'
+
+const forms = document.querySelectorAll('.needs-validation')
+
+Array.from(forms).forEach(form => {
+form.addEventListener('submit', event => {
+  if (!form.checkValidity()) {
+    event.preventDefault()
+    event.stopPropagation()
+  }
+
+  form.classList.add('was-validated')
+}, false)
+})
+})()
+</script>
+</div>
